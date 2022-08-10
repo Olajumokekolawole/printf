@@ -255,3 +255,30 @@ int main(void)
 }
 .RE
 
+To print the values of LONG_MAX and LONG_MIN aligned and
+left-justified with a width of 30:
+
+.RS
+#include "main.h"
+
+#include <limits.h>
+
+int main(void)
+
+{
+
+	_printf("% -30ld -> LONG_MAX\\n", LONG_MAX);
+
+	_printf("%-30ld -> LONG_MIN\\n", LONG_MIN);
+
+}
+.RE
+
+.SH SEE ALSO
+printf(3)
+
+The \fB_printf()\fR function emulates functionality of the C standard library
+function \fBprintf()\fR. This man page borrows from the corresponding Linux
+man page printf(3).
+
+.SH AUTHOR
